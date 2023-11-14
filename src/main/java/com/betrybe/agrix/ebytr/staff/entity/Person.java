@@ -26,9 +26,6 @@ public class Person {
 
   private Role role;
 
-  public Person() {
-  }
-
   /**
    * Constructor.
    */

@@ -2,7 +2,6 @@ package com.betrybe.agrix.controllers;
 
 import com.betrybe.agrix.dto.PersonDto;
 import com.betrybe.agrix.ebytr.staff.entity.Person;
-import com.betrybe.agrix.ebytr.staff.repository.PersonRepository;
 import com.betrybe.agrix.ebytr.staff.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/persons")
 public class PersonController {
+
   private final PersonService personService;
 
   @Autowired
