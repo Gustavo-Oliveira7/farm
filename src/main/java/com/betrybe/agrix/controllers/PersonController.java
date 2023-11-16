@@ -29,15 +29,12 @@ public class PersonController {
    * createPerson.
    */
   @PostMapping
-  public ResponseEntity<PersonDto> createPerson(@RequestBody PersonDto personDto) {
-    Person person = personDto.toPerson();
+  public ResponseEntity<PersonDto> createPerson(@RequestBody Person person) {
     Person created = personService.create(person);
-    PersonDto createDto = new PersonDto(
-        created.getId(),
+    PersonDto personDto = new PersonDto(created.getId(),
         created.getUsername(),
-        created.getRole()
-    );
-    return ResponseEntity.status(201).body(createDto);
+        created.getRole());
+    return ResponseEntity.status(201).body(personDto);
   }
 
 }

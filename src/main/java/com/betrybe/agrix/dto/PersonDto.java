@@ -7,7 +7,16 @@ import com.betrybe.agrix.ebytr.staff.security.Role;
  * PersonDto.
  */
 public record PersonDto(Long id, String username, Role role) {
-  public Person toPerson() {
-    return new Person(username, null, role);
+
+  /**
+   * PersonDto.
+   */
+  public static PersonDto toPerson(Person person) {
+    return new PersonDto(
+      person.getId(),
+      person.getUsername(),
+      person.getRole()
+    );
+
   }
 }
