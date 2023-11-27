@@ -399,5 +399,14 @@ Caso a pessoa não tenha as permissões corretas é retornado status 403<br />
  - O acesso da rota /fertilizers é liberada apenas para pessoas autenticadas com a role ADMIN<br />
 
 
+## Estrutura e relacionamento do Banco de Dados
+
+![Modelo de tabelas](images/agrix-tabelas-fase-b.png)
+
+Nesse modelos, temos as seguintes tabelas:
+- `farm`: representa uma fazenda
+- `crop`: representa uma plantação, e está em relacionamento `n:1` ("muitos para um") com a tabela `farm`
+  - Esta tabela recebeu alguns campos a mais, que guardam datas, e que precisarão ser considerados durante o desenvolvimento da Fase B.
+- `fertilizer`: esta nova tabela representa um fertilizante, e está em um relacionamento `n:n` ("muitos para muitos") com a tabela `crop`. Esse relacionamento é realizado através da tabela `crop_fertilizer`.
 
 
