@@ -1,3 +1,32 @@
+## Bem vindos ao repositório FARM!
+
+ ### O que é?
+  Bem-vindo ao FARM! Este projeto foi desenvolvido para otimizar a eficiência no cultivo de plantações, reduzindo o desperdício de recursos e promovendo o uso responsável da terra disponível para plantio.
+
+## Utilizando o Docker e Docker Compose
+
+ ### Construindo e Executando a Aplicação
+
+   ```http
+  docker-compose up -d
+  ```
+
+  ### Parando a Aplicação
+
+   ```http
+  docker-compose down
+   ```
+
+ ### Acessando a Aplicação
+
+ Após a execução, a aplicação estará disponível em http://localhost:PORTA, onde "PORTA" é a porta configurada no arquivo docker-compose.yml.
+
+ ### Personalizando a Configuração
+
+ Edite o arquivo docker-compose.yml para ajustar as configurações, como portas, variáveis de ambiente e serviços adicionais.
+
+
+
 
 ## Rotas da Aplicação
 
